@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     #local apps
     'leads',
     'agents',
-    'djcrm',
 ]
 
 MIDDLEWARE = [
