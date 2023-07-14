@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class="max-w-lg mx-auto">
+<div class="p-5 max-w-lg mx-auto">
     <form method="post" class="p-5 mt-5">
         {% csrf_token %}
         {{ form|crispy }}
