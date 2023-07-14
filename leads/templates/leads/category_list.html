@@ -23,7 +23,11 @@
             {% for category in category_list %}
                 <tr>
                     <td class="px-4 py-3">
-                    <a href="{% url 'leads:category-detail' category.pk %}">{{ category.name }}</a>
+                    {% elif lead.category.name == "Unassigned" %}
+                      <a href="{% url 'leads:lead-list' %}">{{ category.name }}</a>
+                    {% else %}
+                      <a href="{% url 'leads:category-detail' category.pk %}">{{ category.name }}</a>
+                    {% endif %}
                     </td>
                     <td class="px-4 py-3">{{ category.leads.count }}</td>
                 </tr>
