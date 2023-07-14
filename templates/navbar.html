@@ -6,7 +6,7 @@
           </svg>
           <span class="ml-3 text-xl">DJCRM</span>
       </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center flex-wrap">
           {% if not request.user.is_authenticated %}
           <a href="{% url 'signup' %}" class="mr-5 hover:text-gray-900">Sign Up</a>
           {% else %}
@@ -17,7 +17,7 @@
           {% endif %}
       </nav>
       {% if request.user.is_authenticated %}
-      <span class="ml-3">You are logged in as: {{ request.user.username }}</span>
+      <span class="ml-3 md:ml-0">You are logged in as: {{ request.user.username }}</span>
       <a href="{% url 'logout' %}" class="ml-3 inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" control-id="ControlID-79">
           Logout
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
