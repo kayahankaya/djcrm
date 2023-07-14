@@ -87,11 +87,8 @@ WSGI_APPLICATION = 'djcrm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'OPTIONS': {
-            'sslmode': 'require',
-        },
-    }
+        'ENGINE': 'django.db.backends.postgresql'
+        }
 }
 
 # Password validation
