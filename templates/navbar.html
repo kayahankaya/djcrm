@@ -15,6 +15,7 @@
           {% endif %}
           <a href="{% url 'leads:lead-list' %}" class="mr-5 hover:text-gray-900">Leads</a>
           {% endif %}
+          <a href="{% url 'landing-page' %}" class="mr-5 hover:text-gray-900">Home</a>
       </nav>
       {% if request.user.is_authenticated %}
       <span class="ml-3 md:ml-0">You are logged in as: {{ request.user.username }}</span>
