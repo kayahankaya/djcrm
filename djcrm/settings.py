@@ -13,19 +13,21 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import sys
+import dj_database_url
 from dotenv import load_dotenv
 
 # .env dosyasını yükle
 load_dotenv()
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv("DEBUG", "False") == "True"
 # SECRET_KEY'i al
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 # Application definition
 
